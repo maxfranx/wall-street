@@ -1,0 +1,58 @@
+
+/* Variables */
+$bg-dark: #000000;
+$paper: #1b1b1b;
+$muted: #bfb8a2;
+$accent: #d4af77;
+
+/* Base */
+body { background: $bg-dark; color: #eee; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
+
+/* Cinematic */
+#cinematic-overlay {
+  position: fixed; inset:0; background: rgba(0,0,0,0.95); z-index:2000; transition: opacity .9s ease, visibility .9s;
+}
+#cinematic-overlay.hide { opacity:0; visibility:hidden; pointer-events:none; }
+
+/* Vintage title */
+.vintage-title { font-family: Georgia, 'Times New Roman', serif; color: $accent; letter-spacing: 1px; text-shadow: 0 2px 8px rgba(0,0,0,0.6); }
+
+/* Info balloons */
+.info-balloon {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border-left: 4px solid $accent;
+  padding: 18px; border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  transform-origin: center;
+  transition: transform .25s ease, box-shadow .25s ease;
+  cursor: default;
+  &:hover { transform: translateY(-8px) scale(1.01); box-shadow: 0 16px 40px rgba(0,0,0,0.8); }
+}
+
+/* Floating animation */
+@keyframes floatY { 0% { transform: translateY(0px);} 50% { transform: translateY(-8px);} 100% { transform: translateY(0px);} }
+.info-balloon { animation: floatY 6s ease-in-out infinite; }
+.floating-img { animation: floatY 7s ease-in-out infinite; transition: transform .3s; }
+.floating-img:hover { transform: scale(1.03); }
+
+/* Reveal classes */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Timeline extended */
+.timeline-extended { padding-left: 0; }
+.timeline-item { margin-bottom: 1.2rem; display:flex; gap: 1rem; align-items:flex-start; }
+.timeline-item .date { min-width: 110px; color: $muted; font-weight:600; }
+
+/* Chart styling */
+.chart-svg { border-radius: 6px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding: 8px; }
+
+/* Newspaper style */
+.newspaper { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding: 18px; border-radius: 6px; border-left: 4px solid $muted; box-shadow: 0 8px 30px rgba(0,0,0,0.6); }
+
+/* Gallery images */
+.gallery-img { cursor: pointer; transition: transform .25s; }
+.gallery-img:hover { transform: translateY(-6px) scale(1.02); }
+
+/* Responsive */
+@media (max-width: 767px){ .timeline-item { flex-direction: column; } .timeline-item .date { min-width: auto; } }

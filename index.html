@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>La Caída de Wall Street — 1929 (Premium)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black text-light">
+
+<!-- Cinematic overlay -->
+<div id="cinematic-overlay"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Wall Street 1929</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#intro">Intro</a></li>
+        <li class="nav-item"><a class="nav-link" href="#causas">Causas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#timeline">Timeline</a></li>
+        <li class="nav-item"><a class="nav-link" href="#newdeal">New Deal</a></li>
+        <li class="nav-item"><a class="nav-link" href="#impact">Impacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="intro" class="py-6 text-center" style="padding-top:110px;">
+  <div class="container">
+    <h1 class="display-4 vintage-title reveal">La Caída de Wall Street — 1929</h1>
+    <p class="lead reveal delay-1">El evento que desencadenó la Gran Depresión. Resumen, causas, consecuencias y repercusiones globales.</p>
+    <div class="mt-4 reveal delay-2">
+      <a href="#causas" class="btn btn-outline-light btn-lg">Comenzar</a>
+    </div>
+  </div>
+</header>
+
+<main class="container py-5">
+
+  <!-- Causas con globos interactivos -->
+  <section id="causas" class="mb-5">
+    <h2 class="mb-3 reveal">Causas principales</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <article class="info-balloon reveal" tabindex="0" role="article" aria-label="Especulación">
+          <h5>Especulación y margen</h5>
+          <p>Compra de acciones con crédito (margen) que multiplicó pérdidas cuando los precios se desplomaron.</p>
+          <button class="btn btn-sm btn-outline-secondary more-btn" data-target="#modal-espec">Leer más</button>
+        </article>
+      </div>
+      <div class="col-md-4">
+        <article class="info-balloon reveal delay-1" tabindex="0" role="article" aria-label="Regulación">
+          <h5>Falta de regulación</h5>
+          <p>Mercados poco regulados y prácticas riesgosas sin supervisión adecuada.</p>
+          <button class="btn btn-sm btn-outline-secondary more-btn" data-target="#modal-reg">Leer más</button>
+        </article>
+      </div>
+      <div class="col-md-4">
+        <article class="info-balloon reveal delay-2" tabindex="0" role="article" aria-label="Credito">
+          <h5>Exceso de crédito</h5>
+          <p>Crédito fácil para inversión y consumo que amplificó el choque económico.</p>
+          <button class="btn btn-sm btn-outline-secondary more-btn" data-target="#modal-cred">Leer más</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline extendida con scroll reveal -->
+  <section id="timeline" class="mb-5">
+    <h2 class="mb-3 reveal">Línea del tiempo extendida</h2>
+    <div class="timeline-extended">
+      <div class="timeline-item reveal">
+        <span class="date">1928</span>
+        <div class="content info-balloon">Expansión bursátil, compras con margen y señales de sobrevalor.</div>
+      </div>
+      <div class="timeline-item reveal delay-1">
+        <span class="date">24 Oct 1929</span>
+        <div class="content info-balloon">Jueves Negro: inicio del pánico y ventas masivas.</div>
+      </div>
+      <div class="timeline-item reveal delay-2">
+        <span class="date">29 Oct 1929</span>
+        <div class="content info-balloon">Martes Negro: pérdidas históricas y colapso profundo.</div>
+      </div>
+      <div class="timeline-item reveal delay-3">
+        <span class="date">1930 - 1933</span>
+        <div class="content info-balloon">Gran Depresión: desempleo masivo, quiebras bancarias y caída del comercio.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Deal -->
+  <section id="newdeal" class="mb-5">
+    <h2 class="mb-3 reveal">El New Deal y respuestas políticas</h2>
+    <div class="info-balloon reveal">
+      <p>Tras varios años de crisis, Franklin D. Roosevelt implementó el New Deal (1933) con medidas para recuperar empleo, reformar bancos y regular mercados.</p>
+    </div>
+  </section>
+
+  <!-- Impacto global -->
+  <section id="impact" class="mb-5">
+    <h2 class="mb-3 reveal">Impacto y repercusiones</h2>
+    <div class="row g-4">
+      <div class="col-md-6 reveal">
+        <div class="info-balloon">
+          <h5>Económico</h5>
+          <p>Contracción masiva del PIB, caída del comercio y quiebras bancarias.</p>
+        </div>
+      </div>
+      <div class="col-md-6 reveal delay-1">
+        <div class="info-balloon">
+          <h5>Social y político</h5>
+          <p>Aumento del desempleo, movimientos sociales y cambios en políticas públicas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gráfico histórico (SVG estilizado, Dow Jones 1920-1935 aproximado) -->
+  <section class="mb-5">
+    <h2 class="mb-3 reveal">Gráfico histórico: índice Dow Jones (1920–1935)</h2>
+    <div class="card bg-dark border-0 p-3 reveal">
+      <!-- SVG simple que muestra una caída pronunciada en 1929 -->
+      <svg viewBox="0 0 800 240" preserveAspectRatio="none" class="w-100 chart-svg" aria-label="Gráfico Dow Jones aproximado 1920 a 1935">
+        <defs>
+          <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="#ffd082" stop-opacity="0.9"></stop>
+            <stop offset="100%" stop-color="#e1b07a" stop-opacity="0.2"></stop>
+          </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="#000"></rect>
+        <path d="M0,150 L60,140 L120,130 L180,125 L240,120 L300,115 L360,110 L420,105 L480,125 L540,170 L600,190 L660,220 L720,200 L780,190 L800,185" fill="none" stroke="#ffd082" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+        <text x="10" y="20" class="chart-label">Dow Jones (aprox.)</text>
+        <g class="chart-fill">
+          <path d="M0,150 L60,140 L120,130 L180,125 L240,120 L300,115 L360,110 L420,105 L480,125 L540,170 L600,190 L660,220 L720,200 L780,190 L800,185 L800,240 L0,240 Z" fill="url(#g)" opacity="0.6"/>
+        </g>
+      </svg>
+      <p class="small mt-2 text-muted">Gráfico ilustrativo: la caída central alrededor de 1929 es visible como una gran caída seguida por una recuperación lenta.</p>
+    </div>
+  </section>
+
+  <!-- Galería con modal -->
+  <section id="galeria" class="mb-5">
+    <h2 class="mb-3 reveal">Galería (clic para ampliar)</h2>
+    <div class="row g-3">
+      <div class="col-6 col-md-4 reveal">
+        <img src="img street/mult.jpg" class="img-fluid rounded gallery-img" alt="Multitud frente a la NYSE" data-caption="Multitud frente a la NYSE, 1929">
+      </div>
+      <div class="col-6 col-md-4 reveal delay-1">
+        <img src="img street/1929.jpg" class="img-fluid rounded gallery-img" alt="Títulos en caída" data-caption="Títulos en caída, 1929">
+      </div>
+      <div class="col-6 col-md-4 reveal delay-2">
+        <img src="img street/comedor.webp" class="img-fluid rounded gallery-img" alt="Fila en comedor" data-caption="Fila en comedor, 1930">
+      </div>
+    </div>
+  </section>
+
+  <!-- Newspaper style excerpt -->
+  <section class="mb-5">
+    <h2 class="mb-3 reveal">Titulares de la época</h2>
+    <article class="newspaper reveal">
+      <h3>“Bolsa en caída libre”</h3>
+      <p class="lead">Titulares reales y recortes de periódicos anunciaban pánico y quiebras. Muchos periódicos publicaron fotografías que ahora forman parte del archivo histórico.</p>
+    </article>
+  </section>
+
+</main>
+
+<footer class="text-center py-4 text-muted">
+  <div class="container">
+    <p class="mb-1">© Francisco Córdoba - 2025</p>
+    <p class="small mb-0">Imágenes de archivo: Wikimedia Commons (enlaces en HTML). Proyecto educativo.</p>
+  </div>
+</footer>
+
+<!-- Modales para "leer más" y la galería -->
+<div class="modal fade" id="modal-espec" tabindex="-1"><div class="modal-dialog modal-lg"><div class="modal-content bg-dark text-light"><div class="modal-header"><h5 class="modal-title">Especulación y margen</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Durante los años veinte aumentó el uso del margen: inversores compraban acciones pidiendo prestado, usando las acciones mismas como colateral. Cuando los precios cayeron, los margin calls forzaron ventas.</p></div></div></div></div>
+
+<div class="modal fade" id="modal-reg" tabindex="-1"><div class="modal-dialog modal-lg"><div class="modal-content bg-dark text-light"><div class="modal-header"><h5 class="modal-title">Falta de regulación</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>La supervisión financiera era limitada; prácticas de corretaje arriesgadas y poca transparencia facilitaron la formación de burbujas.</p></div></div></div></div>
+
+<div class="modal fade" id="modal-cred" tabindex="-1"><div class="modal-dialog modal-lg"><div class="modal-content bg-dark text-light"><div class="modal-header"><h5 class="modal-title">Exceso de crédito</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Crédito barato permitió gasto y apalancamiento que intensificó la caída cuando la confianza se rompió.</p></div></div></div></div>
+
+<!-- Gallery modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1"><div class="modal-dialog modal-xl modal-dialog-centered"><div class="modal-content bg-black text-light"><div class="modal-body p-0"><button class="btn btn-sm btn-secondary position-absolute m-3" data-bs-dismiss="modal">Cerrar</button><img id="galleryModalImg" src="" alt="" class="w-100"><div class="p-3"><p id="galleryCaption" class="mb-0"></p></div></div></div></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
